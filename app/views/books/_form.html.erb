@@ -1,0 +1,15 @@
+<div class="container">
+  <%= form_with(model: book) do |form| %>
+  <div><%= form.label "name", class:"form-label" %></div>
+  <div><%= form.text_field :name , class:"form-control" %></div>
+  <div><%= form.label "Author", class:"form-label" %></div>
+  <div><%= form.text_field :author , class:"form-control" %></div>
+  <div><%= form.label "Estado", class:"form-label" %></div>
+  <div><%= form.select :status,options_for_select(@statuses), class:"form-control" %></div>
+  <div><%= form.label "Fecha de Prestamo", class:"form-label mt-1" %></div>
+  <div><%= form.date_field :date_start , class:"form-control" %></div>
+  <div><%= form.label "Fecha de devolución", class:"form-label" %></div>
+  <div><%= form.date_field :date_end , class:"form-control" %></div>
+  <div><%= form.submit "Create book", class:"btn btn-success mt-3" %></div>
+  <% end %>
+</div>
